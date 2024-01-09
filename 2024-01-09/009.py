@@ -1,5 +1,5 @@
 # 숫자 리스트 - 추가,목록,합계,변경,삭제. 함수버전
-numbers= []
+numbers= [1,3,5]
 
 def print_menu():
      print('#### 숫자 CRUD ####')
@@ -20,7 +20,12 @@ def list_number():
 
 def delete_number():
      value = int(input('삭제할 값 입력'))
-
+     index = 0
+     for num in numbers:
+          if num==value:
+            del numbers[index]
+          index=index+1
+          
 
 
 while True:
@@ -33,4 +38,4 @@ while True:
      elif select=='3':
           delete_number()
      elif select=='999':
-          finish()
+          break
