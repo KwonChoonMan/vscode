@@ -8,8 +8,9 @@ tno = 4
 def print_todos():
     for todo in todos:
        print(todo)
-
+# 함수 밖에 있는 변수를 변경하려면 global 변수이름
 def add_todo():
+   global tno
    title = input('할일 입력:')
    todos.append({'tno':tno,'title':title,'finish':False})
    tno=tno+1
